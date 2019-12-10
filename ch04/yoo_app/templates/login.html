@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Flask Web Scheduler</title>
+  <script>
+    function login(){
+        var id = document.getElementById('email').value;
+        var pw = document.getElementById('password').value;
+
+        if(id=='' || pw==''){
+            alert('필수갑은 입력해주십시오.');
+            return false;
+        }else{
+            location.href='/login_chk';
+        }
+    }
+  </script>
+</head>
+<body>
+<div id="div_test">LOGIN</div>
+<hr>
+<form action='/login' method='POST'>
+    <table>
+        <tbody>
+            <tr>
+                <td><input type="text" name='username' /></td>
+            </tr>
+        <tr>
+            <td><input type="password" name='password' /></td>
+        </tr>
+        <tr>
+            <td><button type='submit'>로그인</button></td>
+        </tr>
+        {%- if error != None: -%}
+        <tr>
+            <td>{{error}}</td>
+        </tr>
+        {%- endif -%}
+       </tbody> 
+    </table> 
+</form>
+</body>
+</html>

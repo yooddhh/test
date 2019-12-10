@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Flask Web Scheduler</title>
+</head>
+<body>
+<table width="100%">
+    <tbody>
+        <tr>
+            <td>
+                <div id="div_test"><h2>welcome to timeline page! <small>{{userdata.username}}님 반갑습니다...</small></h2></div>
+            </td>
+            <td style="text-align: right;">
+                <div><button onclick='location.href="/logout";' >로그아웃</button></div>
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
+<hr>
+{{userdata}}
+</body>
+</html>

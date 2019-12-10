@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register.css') }}"/>
+  <title>Flask Web Scheduler</title>
+</head>
+<body>
+<div id="div_test">회원가입</div>
+<hr>
+<form action='/register' method='POST'>
+    <table>
+        <tbody>
+            <tr>
+                <td>username</td>
+                <td><input name='username' type='text' /></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td><input name='email' type='text' /></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td><input name='password' type='password' /></td>
+            </tr>
+            <tr>
+                <td>password_chk</td>
+                <td><input name='password2' type='password' /></td>
+            </tr>
+            <tr>
+                <td colspan='2'><button type='submit'>가입하기</button></td>
+            </tr>
+            <tr>
+                <td colspan='2'>
+                    {{error}}
+                </td>
+            </tr>
+        </tbody>
+</table>
+</form>
+</body>
+</html>
